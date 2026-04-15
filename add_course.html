@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course - Personal Course Organizer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html">
+                <img class="logo" src="images/logo.png" alt="Course Organizer Logo">
+            </a>
+            <nav class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="my_courses.html">My Courses</a></li>
+                    <li><a href="add_course.html">Add Course</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main>
+        <section class="section">
+            <h1>Add Course</h1>
+            <div class="add-course-section">
+                <form>
+                    <div>
+                        <label>Course Name:</label><br>
+                        <input type="text" name="course-name" placeholder="Enter course name"><br><br>
+                    </div>
+                    <div>
+                        <label>Instructor:</label><br>
+                        <input type="text" name="instructor" placeholder="Enter instructor name"><br><br>
+                    </div>
+                    <div>
+                        <label>Credit Hours:</label><br>
+                        <input type="text" name="credit-hours" placeholder="Enter number of credit hours"><br><br>
+                    </div>
+                    <div>
+                        <label>Notes:</label><br>
+                        <input type="text" name="notes" placeholder="Enter any notes"><br><br>
+                    </div>
+                    <div>
+                        <input type="submit" value="Save Changes">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Zeyad Mohamed (Course Organizer). All rights reserved.</p>
+    </footer>
+</body>
+</html>

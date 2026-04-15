@@ -1,0 +1,343 @@
+/* Global Rules */
+:root {
+    --main-color: #008a9a;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+        min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    max-width: 1020px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .container { max-width: 960px; }
+}
+
+@media (max-width: 992px) {
+    .container { max-width: 720px; }
+}
+
+@media (max-width: 768px) {
+    .container { max-width: 540px; }
+}
+
+@media (max-width: 576px) {
+    .container { max-width: 100%; }
+}
+
+/* End Global Rules */
+
+/* Table Style */
+table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+th, td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    color: var(--main-color);
+}
+th {
+    background-color: var(--main-color);
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: rgba(128, 128, 128, 0.378);
+    transition: .3s;
+}
+/* End Table Style */
+
+/* Start Header */
+header.header {
+    padding: 20px;
+    z-index: 100;
+}
+header.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+header.header .logo {
+    width: 75px;
+}
+header.header nav.links {
+    position: relative;
+}
+header.header nav.links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+header.header nav.links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+header.header nav.links .icon span {
+    background-color: black;
+    margin-bottom: 5px;
+    height: 3px;
+}
+header.header nav.links .icon span:first-child {
+    width: 100%;
+}
+header.header nav.links .icon span:nth-child(2) {
+    width: 60%;
+    transition: .3s;
+}
+header.header nav.links .icon span:last-child {
+    width: 100%;
+}
+header.header nav.links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: 100%;
+    display: none;
+    z-index: 1;
+}
+header.header nav.links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+header.header nav.links:hover ul {
+    display: block;
+}
+header.header nav.links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+}
+header.header nav.links ul li a:hover {
+    padding-left: 25px;
+    color: #00e5ff;
+}
+/* End Header */
+
+/* Main */
+
+main {
+    flex: 1;
+}
+
+/* Start Landing */
+.landing {
+    background-image: url(../images/landing_2.jpg);
+    background-size: cover;
+    height: calc(100svh - 100px);
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 8px gray;
+}
+@media (max-width: 768px) {
+    .landing {
+        height: 293px;
+    }
+}
+.intro-text {
+    text-align: center;
+    padding: 40px 20px 0;
+}
+.intro-text h1 {
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--main-color);
+}
+.intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+/* End Landing */
+
+/* Start Features */
+section.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+section.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 25px;
+}
+section.features .feat {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 8px gray;
+    transition: .3s;
+}
+section.features .feat i {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+section.features .feat:hover {
+    transform: scale(1.05);
+}
+/* End Features */
+
+/* Start My Courses section */
+.section .table-wrapper {
+  overflow-x: auto;
+}
+
+.section table {
+  width: 100%;          
+  table-layout: fixed;   
+  border-collapse: collapse;
+}
+
+.section table th,
+.section table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+/* For phones */
+@media (max-width: 600px) {
+  .section table th,
+  .section table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+}
+
+/* End My Courses section */
+
+/* Add Course Section */
+h1 {
+    text-align: center;
+    margin: 30px 0 20px;
+    color: var(--main-color);
+}
+label {
+    color: var(--main-color);
+}
+.add-course-section {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 60px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+.add-course-section div {
+    padding: 20px;
+    width: auto;
+    margin: 0 auto;
+}
+.add-course-section input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.add-course-section input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-course-section input[type="submit"]:hover {
+    background-color: orange;
+}
+input:focus {
+    box-shadow: 0 0 5px gray;
+    outline: none;
+    transition: .3s;
+
+}
+/* End Add Course Section */
+
+/* Contact Us */
+.contact-us {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 60px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+.contact-us div {
+    padding: 20px;
+    width: auto;
+    margin: 0 auto;
+}
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.contact-us button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-us button[type="submit"]:hover {
+    background-color: orange;
+}
+/* End Contact Us */
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--main-color);
+    color: white;
+    text-align: center;
+}
